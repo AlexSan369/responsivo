@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mooli', sans-serif;
 }
 
 body {
@@ -12,70 +12,91 @@ body {
     color: #fff;
 }
 
-h2 {
+header {
+    width: 100vw;
     text-align: center;
+    line-height: 4rem;
+    text-transform: capitalize;
+    margin: 2rem 0 2rem 0;
+
+    background-color: rgb(12, 66, 48);
 }
 
 .col {
-    float: left;
     width: 30vw;
-    padding: .5rem;
+    float: left;
+    margin: 0 .5rem;
+}
+
+.col:hover {
+    box-shadow: 0 0 20px 1px #ffffffa7;
 }
 
 .price-box {
-    background-color: #fff;
     color: #555;
     list-style-type: none;
-    border: 1px solid #555;
+
+    background-color: #fff;
 }
 
-.header {
-    background-color: #111;
+.price-box .header{
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    background-color: #111;
 }
 
 .header.header-green {
     background-color: #4caf50;
 }
-
 .price-box li {
     padding: 20px;
+    text-align: center;
     border-bottom: 20px solid #eee;
-    text-align: center  ;
 }
 
 .price-box li a.btn {
-    background-color: #4caf50;
     border: none;
     color: #fff;
     padding: 10px 15px;
-    text-align: center;
     text-decoration: none;
     font-size: 1.1rem;
+
+    background-color: #4caf50;
+}
+.price-box li a.btn:hover{
+    background-color: #3a7c3c;
 }
 
 @media(max-width: 768px) {
     .col {
         width: 100vw;
-        background-color: #5fe1d0;
+    }
+    header {
+        background-color: rgb(10, 245, 166);
     }
 }
 
-@media(max-width: 556px) {
-    .col {
-        width: 80vw;
-        margin: 0 auto;
-        background-color: rgb(219, 127, 255);
-        color: hotpink;
+@media (max-width: 576px){
+    header {
+        line-height: 2.5rem;
     }
-}
-
-@media(max-width: 228px) {
     .price-box li a.btn {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
 
+@media print {
+    .col {
+        height: 100vh;
+    }
+    .price-box li a.btn {
+        display: none;
+    }
 
-
+    .price-box li {
+        padding: 10px 20px;
+        border-bottom: 10px solid #eee;
+    }
+}
